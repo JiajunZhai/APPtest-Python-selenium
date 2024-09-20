@@ -8,7 +8,6 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 # 打开浏览器
 
 # 创建 WebDriver 对象，指明使用chrome浏览器驱动
-# wd = webdriver.Chrome(service=Service(r'C:\tools\chromedriver.exe'))
 # 创建环境变量后使用以下方法即可不用指定浏览器驱动
 wd = webdriver.Chrome()
 wd.implicitly_wait(5)
