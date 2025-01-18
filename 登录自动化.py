@@ -1,3 +1,4 @@
+from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException 
@@ -15,18 +16,18 @@ wd.implicitly_wait(5)
 # 调用WebDriver 对象的get方法 可以让浏览器打开指定网址
 wd.get('http://127.0.0.1:5500/page/login/login.html')
 
-username = 'zjl'
-password = '123'
+username = 'qq'
+password = 'qq'
 
 
 wd.find_element(By.ID, 'login-username').send_keys(username)
 wd.find_element(By.ID, 'login-password').send_keys(password)
 
 # 自动获取验证码
-yzm_text = wd.find_element(By.ID, 'yzm').text
-print("当前登录的验证码为：", yzm_text)
+# yzm_text = wd.find_element(By.ID, 'yzm').text
+# print("当前登录的验证码为：", yzm_text)
 element = wd.find_element(By.ID, 'loginCaptchaInput')
-element.send_keys(yzm_text)
+# element.send_keys(yzm_text)
 dl_button = wd.find_element(By.ID, 'dl')
 dl_button.click()
 # 假设登录成功后会显示一个带有用户名字的元素

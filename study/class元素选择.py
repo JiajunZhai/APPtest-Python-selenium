@@ -6,9 +6,9 @@ from selenium.webdriver.common.by import By
 
 wd = webdriver.Chrome()
 
-wd.get('https://cdn2.byhy.net/files/selenium/sample1.html')
+wd.get('http://127.0.0.1:5500/page/login/login.html')
 
-animal_element = wd.find_element(By.CLASS_NAME, 'animal')
+animal_element = wd.find_element(By.CLASS_NAME, 'form-group')
 
 print(animal_element.text)
 

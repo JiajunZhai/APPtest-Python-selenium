@@ -25,10 +25,10 @@ wd.find_element(By.ID, 'register-password').send_keys(password)
 wd.find_element(By.ID, 'register-confirm-password').send_keys(password)
 
 # 自动获取验证码
-yzmm_text = wd.find_element(By.ID, 'yzmm').text
-print("当前注册的验证码为：", yzmm_text)
+# yzmm_text = wd.find_element(By.ID, 'yzmm').text
+# print("当前注册的验证码为：", yzmm_text)
 element = wd.find_element(By.ID, 'registerCaptchaInput')
-element.send_keys(yzmm_text)
+# element.send_keys(yzmm_text)
 # 提交注册表单
 wd.find_element(By.ID, 'zc').click()
 
